@@ -1,0 +1,29 @@
+[project]
+name = "waymo-imitation-rl"
+version = "0.1.0"
+description = "Robust Imitation Learning using Waymo Open Dataset and PPO"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "stable-baselines3>=2.0.0",
+    "metadrive-simulator>=0.4.0",
+    "scenarionet @ git+https://github.com/metadriverse/ScenarioNet.git",
+    "gymnasium",
+    "torch",
+    "numpy",
+    "pyyaml",
+    "tensorboard",
+    "protobuf==3.20.3",
+    "tensorflow",
+    "imageio>=2.37.2",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]

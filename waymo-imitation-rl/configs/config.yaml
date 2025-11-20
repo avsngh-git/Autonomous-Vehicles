@@ -1,0 +1,13 @@
+training:
+  use_render: False
+  num_scenarios: 100
+  horizon: 500
+  total_timesteps: 1000000
+  batch_size: 64
+  learning_rate: 0.0003
+  bc_coefficient: 0.5
+
+paths:
+  data_directory: "../data/waymo_processed"
+  logs: "./logs/"
+  models: "./models/"
